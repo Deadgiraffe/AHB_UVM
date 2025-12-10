@@ -1,0 +1,466 @@
+xrun(64): 20.09-s001: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	20.09-s001: Started on Dec 08, 2025 at 10:10:06 IST
+xrun
+	-access +rwc
+	-sv
+	-uvm
+	-f file.f
+		./interface.sv
+		./ahb_slave.sv
+		./package.sv
+		./top.sv
+	-gui
+SVSEED default: 1
+xmsim: *W,RNDXCELON: A newer version of the SystemVerilog constraint solver is being used which has better support for array-solving, new solve-order mechanism, and seed stability enhancements..
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> 
+xcelium> source /opt/cadence/XCELIUM2009/tools/xcelium/files/xmsimrc
+xcelium> source /opt/cadence/XCELIUM2009/tools/methodology/UVM/CDNS-1.1d/additions/sv/files/tcl/uvm_sim.tcl
+xcelium> database -open waves -into waves.shm -default
+Created default SHM database waves
+xcelium> probe -create -shm top.intf.HADDR top.intf.HBURST top.intf.HBUSREQx top.intf.HGRANT top.intf.HLOCKx top.intf.HMASTER top.intf.HMASTLOCK top.intf.HPROT top.intf.HRDATA top.intf.HREADY top.intf.HRESP top.intf.HSELx top.intf.HSIZE top.intf.HSPLITx top.intf.HTRANS top.intf.HWDATA top.intf.HWRITE top.intf.clk top.intf.reset
+Created probe 1
+xcelium> run
+----------------------------------------------------------------
+CDNS-UVM-1.1d (20.09-s001)
+(C) 2007-2013 Mentor Graphics Corporation
+(C) 2007-2013 Cadence Design Systems, Inc.
+(C) 2006-2013 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+  See http://www.eda.org/svdb/view.php?id=3313 for more details.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+UVM_INFO @ 0: reporter [RNTST] Running test test...
+xmsim: *W,PRPASZ: Packed array at "worklib.uvm_pkg::uvm_string_to_bits.uvm_string_to_bits" of 115200 bits exceeds limit of 4096 - not probed
+ Use 'probe -create -packed 115200 worklib.uvm_pkg::uvm_string_to_bits.uvm_string_to_bits' or 'setenv SHM_PACKED_LIMIT 115200' to adjust limit.
+xmsim: *W,PRPASZ: Packed array at "worklib.uvm_pkg::uvm_bits_to_string.str" of 115200 bits exceeds limit of 4096 - not probed
+ Use 'probe -create -packed 115200 worklib.uvm_pkg::uvm_bits_to_string.str' or 'setenv SHM_PACKED_LIMIT 115200' to adjust limit.
+xmsim: *W,PRPASZ: Packed array at "worklib.cdns_uvm_pkg::cdns_tcl_print_component.rval" of 115200 bits exceeds limit of 4096 - not probed
+ Use 'probe -create -packed 115200 worklib.cdns_uvm_pkg::cdns_tcl_print_component.rval' or 'setenv SHM_PACKED_LIMIT 115200' to adjust limit.
+xmsim: *W,PRPASZ: Packed array at "worklib.cdns_uvm_pkg::cdns_tcl_print_components.rval" of 115200 bits exceeds limit of 4096 - not probed
+ Use 'probe -create -packed 115200 worklib.cdns_uvm_pkg::cdns_tcl_print_components.rval' or 'setenv SHM_PACKED_LIMIT 115200' to adjust limit.
+xmsim: *W,PRPASZ: Packed array at "worklib.cdns_uvm_pkg::cdns_tcl_list_components.rval" of 115200 bits exceeds limit of 4096 - not probed
+ Use 'probe -create -packed 115200 worklib.cdns_uvm_pkg::cdns_tcl_list_components.rval' or 'setenv SHM_PACKED_LIMIT 115200' to adjust limit.
+UVM_INFO monitor.sv(20) @ 0: uvm_test_top.env_handle.agent_handle.monitor_handle [MONITOR] Start of Monitor
+UVM_INFO sequence.sv(9) @ 0: uvm_test_top.env_handle.agent_handle.seqr_handle@@seq_handle [SEQUENCE] Start of Sequence
+stop -create -name Randomize -randomize
+Created stop Randomize
+
+----------------------------------------------------------------------------------------------------------
+Name                           Type      Size  Value                                                      
+----------------------------------------------------------------------------------------------------------
+req                            seqItem   -     @2650                                                      
+  HBUSREQx                     integral  1     'h1                                                        
+  HLOCKx                       integral  1     'h1                                                        
+  HTRANS                       integral  2     'h2                                                        
+  HADDR                        integral  32    'h0                                                        
+  HWRITE                       integral  1     'h1                                                        
+  HSIZE                        integral  3     'h0                                                        
+  HBURST                       integral  3     'h3                                                        
+  HPROT                        integral  4     'h9                                                        
+  HWDATA                       integral  32    'h5                                                        
+  begin_time                   time      64    0                                                          
+  depth                        int       32    'd2                                                        
+  parent sequence (name)       string    10    seq_handle                                                 
+  parent sequence (full name)  string    59    uvm_test_top.env_handle.agent_handle.seqr_handle.seq_handle
+  sequencer                    string    48    uvm_test_top.env_handle.agent_handle.seqr_handle           
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+Name                           Type      Size  Value                                                      
+----------------------------------------------------------------------------------------------------------
+req                            seqItem   -     @2650                                                      
+  HBUSREQx                     integral  1     'h1                                                        
+  HLOCKx                       integral  1     'h1                                                        
+  HTRANS                       integral  2     'h2                                                        
+  HADDR                        integral  32    'h0                                                        
+  HWRITE                       integral  1     'h1                                                        
+  HSIZE                        integral  3     'h0                                                        
+  HBURST                       integral  3     'h3                                                        
+  HPROT                        integral  4     'h9                                                        
+  HWDATA                       integral  32    'h5                                                        
+  begin_time                   time      64    0                                                          
+  depth                        int       32    'd2                                                        
+  parent sequence (name)       string    10    seq_handle                                                 
+  parent sequence (full name)  string    59    uvm_test_top.env_handle.agent_handle.seqr_handle.seq_handle
+  sequencer                    string    48    uvm_test_top.env_handle.agent_handle.seqr_handle           
+----------------------------------------------------------------------------------------------------------
+UVM_INFO monitor.sv(30) @ 13: uvm_test_top.env_handle.agent_handle.monitor_handle [MONITOR] 13 Received transaction: Addr=0 
+UVM_INFO monitor.sv(30) @ 15: uvm_test_top.env_handle.agent_handle.monitor_handle [MONITOR] 15 Received transaction: Addr=0 
+UVM_INFO monitor.sv(46) @ 15: uvm_test_top.env_handle.agent_handle.monitor_handle [MONITOR] 15 Received transaction: Addr=0 Data=0
+UVM_INFO scoreboard.sv(12) @ 15: uvm_test_top.env_handle.scb_handle [SCOREBOARD] Start of Scoreboard
+UVM_INFO scoreboard.sv(17) @ 15: uvm_test_top.env_handle.scb_handle [SCOREBOARD] arr= '{0:'h0}
+----------------------------------------------------------------------------------------------------------
+Name                           Type      Size  Value                                                      
+----------------------------------------------------------------------------------------------------------
+req                            seqItem   -     @2650                                                      
+  HBUSREQx                     integral  1     'h1                                                        
+  HLOCKx                       integral  1     'h0                                                        
+  HTRANS                       integral  2     'h3                                                        
+  HADDR                        integral  32    'h8                                                        
+  HWRITE                       integral  1     'h1                                                        
+  HSIZE                        integral  3     'h0                                                        
+  HBURST                       integral  3     'h3                                                        
+  HPROT                        integral  4     'h3                                                        
+  HWDATA                       integral  32    'h7                                                        
+  begin_time                   time      64    15                                                         
+  end_time                     time      64    15                                                         
+  depth                        int       32    'd2                                                        
+  parent sequence (name)       string    10    seq_handle                                                 
+  parent sequence (full name)  string    59    uvm_test_top.env_handle.agent_handle.seqr_handle.seq_handle
+  sequencer                    string    48    uvm_test_top.env_handle.agent_handle.seqr_handle           
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+Name                           Type      Size  Value                                                      
+----------------------------------------------------------------------------------------------------------
+req                            seqItem   -     @2650                                                      
+  HBUSREQx                     integral  1     'h1                                                        
+  HLOCKx                       integral  1     'h0                                                        
+  HTRANS                       integral  2     'h3                                                        
+  HADDR                        integral  32    'h8                                                        
+  HWRITE                       integral  1     'h1                                                        
+  HSIZE                        integral  3     'h0                                                        
+  HBURST                       integral  3     'h3                                                        
+  HPROT                        integral  4     'h3                                                        
+  HWDATA                       integral  32    'h7                                                        
+  begin_time                   time      64    15                                                         
+  end_time                     time      64    15                                                         
+  depth                        int       32    'd2                                                        
+  parent sequence (name)       string    10    seq_handle                                                 
+  parent sequence (full name)  string    59    uvm_test_top.env_handle.agent_handle.seqr_handle.seq_handle
+  sequencer                    string    48    uvm_test_top.env_handle.agent_handle.seqr_handle           
+----------------------------------------------------------------------------------------------------------
+UVM_INFO monitor.sv(30) @ 17: uvm_test_top.env_handle.agent_handle.monitor_handle [MONITOR] 17 Received transaction: Addr=8 
+UVM_INFO monitor.sv(46) @ 17: uvm_test_top.env_handle.agent_handle.monitor_handle [MONITOR] 17 Received transaction: Addr=0 Data=5
+UVM_INFO scoreboard.sv(12) @ 17: uvm_test_top.env_handle.scb_handle [SCOREBOARD] Start of Scoreboard
+UVM_INFO scoreboard.sv(17) @ 17: uvm_test_top.env_handle.scb_handle [SCOREBOARD] arr= '{0:'h5}
+----------------------------------------------------------------------------------------------------------
+Name                           Type      Size  Value                                                      
+----------------------------------------------------------------------------------------------------------
+req                            seqItem   -     @2650                                                      
+  HBUSREQx                     integral  1     'h0                                                        
+  HLOCKx                       integral  1     'h0                                                        
+  HTRANS                       integral  2     'h3                                                        
+  HADDR                        integral  32    'h10                                                       
+  HWRITE                       integral  1     'h1                                                        
+  HSIZE                        integral  3     'h0                                                        
+  HBURST                       integral  3     'h3                                                        
+  HPROT                        integral  4     'h9                                                        
+  HWDATA                       integral  32    'h8                                                        
+  begin_time                   time      64    17                                                         
+  end_time                     time      64    17                                                         
+  depth                        int       32    'd2                                                        
+  parent sequence (name)       string    10    seq_handle                                                 
+  parent sequence (full name)  string    59    uvm_test_top.env_handle.agent_handle.seqr_handle.seq_handle
+  sequencer                    string    48    uvm_test_top.env_handle.agent_handle.seqr_handle           
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+Name                           Type      Size  Value                                                      
+----------------------------------------------------------------------------------------------------------
+req                            seqItem   -     @2650                                                      
+  HBUSREQx                     integral  1     'h0                                                        
+  HLOCKx                       integral  1     'h0                                                        
+  HTRANS                       integral  2     'h3                                                        
+  HADDR                        integral  32    'h10                                                       
+  HWRITE                       integral  1     'h1                                                        
+  HSIZE                        integral  3     'h0                                                        
+  HBURST                       integral  3     'h3                                                        
+  HPROT                        integral  4     'h9                                                        
+  HWDATA                       integral  32    'h8                                                        
+  begin_time                   time      64    17                                                         
+  end_time                     time      64    17                                                         
+  depth                        int       32    'd2                                                        
+  parent sequence (name)       string    10    seq_handle                                                 
+  parent sequence (full name)  string    59    uvm_test_top.env_handle.agent_handle.seqr_handle.seq_handle
+  sequencer                    string    48    uvm_test_top.env_handle.agent_handle.seqr_handle           
+----------------------------------------------------------------------------------------------------------
+UVM_INFO monitor.sv(30) @ 19: uvm_test_top.env_handle.agent_handle.monitor_handle [MONITOR] 19 Received transaction: Addr=10 
+UVM_INFO monitor.sv(46) @ 19: uvm_test_top.env_handle.agent_handle.monitor_handle [MONITOR] 19 Received transaction: Addr=8 Data=7
+UVM_INFO scoreboard.sv(12) @ 19: uvm_test_top.env_handle.scb_handle [SCOREBOARD] Start of Scoreboard
+UVM_INFO scoreboard.sv(17) @ 19: uvm_test_top.env_handle.scb_handle [SCOREBOARD] arr= '{0:'h5, 8:'h7}
+----------------------------------------------------------------------------------------------------------
+Name                           Type      Size  Value                                                      
+----------------------------------------------------------------------------------------------------------
+req                            seqItem   -     @2650                                                      
+  HBUSREQx                     integral  1     'h0                                                        
+  HLOCKx                       integral  1     'h1                                                        
+  HTRANS                       integral  2     'h3                                                        
+  HADDR                        integral  32    'h18                                                       
+  HWRITE                       integral  1     'h1                                                        
+  HSIZE                        integral  3     'h0                                                        
+  HBURST                       integral  3     'h3                                                        
+  HPROT                        integral  4     'ha                                                        
+  HWDATA                       integral  32    'h2                                                        
+  begin_time                   time      64    19                                                         
+  end_time                     time      64    19                                                         
+  depth                        int       32    'd2                                                        
+  parent sequence (name)       string    10    seq_handle                                                 
+  parent sequence (full name)  string    59    uvm_test_top.env_handle.agent_handle.seqr_handle.seq_handle
+  sequencer                    string    48    uvm_test_top.env_handle.agent_handle.seqr_handle           
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+Name                           Type      Size  Value                                                      
+----------------------------------------------------------------------------------------------------------
+req                            seqItem   -     @2650                                                      
+  HBUSREQx                     integral  1     'h0                                                        
+  HLOCKx                       integral  1     'h1                                                        
+  HTRANS                       integral  2     'h3                                                        
+  HADDR                        integral  32    'h18                                                       
+  HWRITE                       integral  1     'h1                                                        
+  HSIZE                        integral  3     'h0                                                        
+  HBURST                       integral  3     'h3                                                        
+  HPROT                        integral  4     'ha                                                        
+  HWDATA                       integral  32    'h2                                                        
+  begin_time                   time      64    19                                                         
+  end_time                     time      64    19                                                         
+  depth                        int       32    'd2                                                        
+  parent sequence (name)       string    10    seq_handle                                                 
+  parent sequence (full name)  string    59    uvm_test_top.env_handle.agent_handle.seqr_handle.seq_handle
+  sequencer                    string    48    uvm_test_top.env_handle.agent_handle.seqr_handle           
+----------------------------------------------------------------------------------------------------------
+UVM_INFO monitor.sv(30) @ 21: uvm_test_top.env_handle.agent_handle.monitor_handle [MONITOR] 21 Received transaction: Addr=18 
+UVM_INFO monitor.sv(46) @ 21: uvm_test_top.env_handle.agent_handle.monitor_handle [MONITOR] 21 Received transaction: Addr=10 Data=8
+UVM_INFO scoreboard.sv(12) @ 21: uvm_test_top.env_handle.scb_handle [SCOREBOARD] Start of Scoreboard
+UVM_INFO scoreboard.sv(17) @ 21: uvm_test_top.env_handle.scb_handle [SCOREBOARD] arr= '{0:'h5, 8:'h7, 16:'h8}
+----------------------------------------------------------------------------------------------------------
+Name                           Type      Size  Value                                                      
+----------------------------------------------------------------------------------------------------------
+req                            seqItem   -     @2650                                                      
+  HBUSREQx                     integral  1     'h0                                                        
+  HLOCKx                       integral  1     'h1                                                        
+  HTRANS                       integral  2     'h2                                                        
+  HADDR                        integral  32    'h0                                                        
+  HWRITE                       integral  1     'h0                                                        
+  HSIZE                        integral  3     'h0                                                        
+  HBURST                       integral  3     'h3                                                        
+  HPROT                        integral  4     'h0                                                        
+  HWDATA                       integral  32    'he9a42224                                                 
+  begin_time                   time      64    21                                                         
+  end_time                     time      64    21                                                         
+  depth                        int       32    'd2                                                        
+  parent sequence (name)       string    10    seq_handle                                                 
+  parent sequence (full name)  string    59    uvm_test_top.env_handle.agent_handle.seqr_handle.seq_handle
+  sequencer                    string    48    uvm_test_top.env_handle.agent_handle.seqr_handle           
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+Name                           Type      Size  Value                                                      
+----------------------------------------------------------------------------------------------------------
+req                            seqItem   -     @2650                                                      
+  HBUSREQx                     integral  1     'h0                                                        
+  HLOCKx                       integral  1     'h1                                                        
+  HTRANS                       integral  2     'h2                                                        
+  HADDR                        integral  32    'h0                                                        
+  HWRITE                       integral  1     'h0                                                        
+  HSIZE                        integral  3     'h0                                                        
+  HBURST                       integral  3     'h3                                                        
+  HPROT                        integral  4     'h0                                                        
+  HWDATA                       integral  32    'he9a42224                                                 
+  begin_time                   time      64    21                                                         
+  end_time                     time      64    21                                                         
+  depth                        int       32    'd2                                                        
+  parent sequence (name)       string    10    seq_handle                                                 
+  parent sequence (full name)  string    59    uvm_test_top.env_handle.agent_handle.seqr_handle.seq_handle
+  sequencer                    string    48    uvm_test_top.env_handle.agent_handle.seqr_handle           
+----------------------------------------------------------------------------------------------------------
+UVM_INFO monitor.sv(30) @ 23: uvm_test_top.env_handle.agent_handle.monitor_handle [MONITOR] 23 Received transaction: Addr=18 
+UVM_INFO monitor.sv(46) @ 23: uvm_test_top.env_handle.agent_handle.monitor_handle [MONITOR] 23 Received transaction: Addr=18 Data=2
+UVM_INFO scoreboard.sv(12) @ 23: uvm_test_top.env_handle.scb_handle [SCOREBOARD] Start of Scoreboard
+UVM_INFO scoreboard.sv(17) @ 23: uvm_test_top.env_handle.scb_handle [SCOREBOARD] arr= '{0:'h5, 8:'h7, 16:'h8, 24:'h2}
+UVM_INFO monitor.sv(30) @ 25: uvm_test_top.env_handle.agent_handle.monitor_handle [MONITOR] 25 Received transaction: Addr=18 
+UVM_INFO monitor.sv(46) @ 25: uvm_test_top.env_handle.agent_handle.monitor_handle [MONITOR] 25 Received transaction: Addr=18 Data=2
+UVM_INFO scoreboard.sv(12) @ 25: uvm_test_top.env_handle.scb_handle [SCOREBOARD] Start of Scoreboard
+UVM_INFO scoreboard.sv(17) @ 25: uvm_test_top.env_handle.scb_handle [SCOREBOARD] arr= '{0:'h5, 8:'h7, 16:'h8, 24:'h2}
+UVM_INFO monitor.sv(51) @ 27: uvm_test_top.env_handle.agent_handle.monitor_handle [MONITOR] 27 Received transaction: Addr=18 Data=0
+UVM_INFO scoreboard.sv(12) @ 27: uvm_test_top.env_handle.scb_handle [SCOREBOARD] Start of Scoreboard
+UVM_ERROR scoreboard.sv(25) @ 27: uvm_test_top.env_handle.scb_handle [Error Data] Comparison UNSuccessful for Addr=24, Sent Data=2, Received Data=0
+UVM_INFO scoreboard.sv(17) @ 27: uvm_test_top.env_handle.scb_handle [SCOREBOARD] arr= '{0:'h5, 8:'h7, 16:'h8, 24:'h2}
+UVM_INFO monitor.sv(30) @ 27: uvm_test_top.env_handle.agent_handle.monitor_handle [MONITOR] 27 Received transaction: Addr=0 
+UVM_INFO monitor.sv(30) @ 29: uvm_test_top.env_handle.agent_handle.monitor_handle [MONITOR] 29 Received transaction: Addr=0 
+UVM_INFO monitor.sv(51) @ 29: uvm_test_top.env_handle.agent_handle.monitor_handle [MONITOR] 29 Received transaction: Addr=0 Data=0
+UVM_INFO scoreboard.sv(12) @ 29: uvm_test_top.env_handle.scb_handle [SCOREBOARD] Start of Scoreboard
+UVM_ERROR scoreboard.sv(25) @ 29: uvm_test_top.env_handle.scb_handle [Error Data] Comparison UNSuccessful for Addr=0, Sent Data=5, Received Data=0
+UVM_INFO scoreboard.sv(17) @ 29: uvm_test_top.env_handle.scb_handle [SCOREBOARD] arr= '{0:'h5, 8:'h7, 16:'h8, 24:'h2}
+----------------------------------------------------------------------------------------------------------
+Name                           Type      Size  Value                                                      
+----------------------------------------------------------------------------------------------------------
+req                            seqItem   -     @2650                                                      
+  HBUSREQx                     integral  1     'h0                                                        
+  HLOCKx                       integral  1     'h0                                                        
+  HTRANS                       integral  2     'h3                                                        
+  HADDR                        integral  32    'h8                                                        
+  HWRITE                       integral  1     'h0                                                        
+  HSIZE                        integral  3     'h0                                                        
+  HBURST                       integral  3     'h3                                                        
+  HPROT                        integral  4     'ha                                                        
+  HWDATA                       integral  32    'hf36b864                                                  
+  begin_time                   time      64    29                                                         
+  end_time                     time      64    29                                                         
+  depth                        int       32    'd2                                                        
+  parent sequence (name)       string    10    seq_handle                                                 
+  parent sequence (full name)  string    59    uvm_test_top.env_handle.agent_handle.seqr_handle.seq_handle
+  sequencer                    string    48    uvm_test_top.env_handle.agent_handle.seqr_handle           
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+Name                           Type      Size  Value                                                      
+----------------------------------------------------------------------------------------------------------
+req                            seqItem   -     @2650                                                      
+  HBUSREQx                     integral  1     'h0                                                        
+  HLOCKx                       integral  1     'h0                                                        
+  HTRANS                       integral  2     'h3                                                        
+  HADDR                        integral  32    'h8                                                        
+  HWRITE                       integral  1     'h0                                                        
+  HSIZE                        integral  3     'h0                                                        
+  HBURST                       integral  3     'h3                                                        
+  HPROT                        integral  4     'ha                                                        
+  HWDATA                       integral  32    'hf36b864                                                  
+  begin_time                   time      64    29                                                         
+  end_time                     time      64    29                                                         
+  depth                        int       32    'd2                                                        
+  parent sequence (name)       string    10    seq_handle                                                 
+  parent sequence (full name)  string    59    uvm_test_top.env_handle.agent_handle.seqr_handle.seq_handle
+  sequencer                    string    48    uvm_test_top.env_handle.agent_handle.seqr_handle           
+----------------------------------------------------------------------------------------------------------
+UVM_INFO monitor.sv(30) @ 31: uvm_test_top.env_handle.agent_handle.monitor_handle [MONITOR] 31 Received transaction: Addr=8 
+UVM_INFO monitor.sv(51) @ 31: uvm_test_top.env_handle.agent_handle.monitor_handle [MONITOR] 31 Received transaction: Addr=0 Data=5
+UVM_INFO scoreboard.sv(12) @ 31: uvm_test_top.env_handle.scb_handle [SCOREBOARD] Start of Scoreboard
+UVM_INFO scoreboard.sv(23) @ 31: uvm_test_top.env_handle.scb_handle [SUCCESSFUL] Comparison Successful for Addr=0
+UVM_INFO scoreboard.sv(17) @ 31: uvm_test_top.env_handle.scb_handle [SCOREBOARD] arr= '{0:'h5, 8:'h7, 16:'h8, 24:'h2}
+----------------------------------------------------------------------------------------------------------
+Name                           Type      Size  Value                                                      
+----------------------------------------------------------------------------------------------------------
+req                            seqItem   -     @2650                                                      
+  HBUSREQx                     integral  1     'h0                                                        
+  HLOCKx                       integral  1     'h1                                                        
+  HTRANS                       integral  2     'h3                                                        
+  HADDR                        integral  32    'h10                                                       
+  HWRITE                       integral  1     'h0                                                        
+  HSIZE                        integral  3     'h0                                                        
+  HBURST                       integral  3     'h3                                                        
+  HPROT                        integral  4     'hc                                                        
+  HWDATA                       integral  32    'ha5f904a5                                                 
+  begin_time                   time      64    31                                                         
+  end_time                     time      64    31                                                         
+  depth                        int       32    'd2                                                        
+  parent sequence (name)       string    10    seq_handle                                                 
+  parent sequence (full name)  string    59    uvm_test_top.env_handle.agent_handle.seqr_handle.seq_handle
+  sequencer                    string    48    uvm_test_top.env_handle.agent_handle.seqr_handle           
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+Name                           Type      Size  Value                                                      
+----------------------------------------------------------------------------------------------------------
+req                            seqItem   -     @2650                                                      
+  HBUSREQx                     integral  1     'h0                                                        
+  HLOCKx                       integral  1     'h1                                                        
+  HTRANS                       integral  2     'h3                                                        
+  HADDR                        integral  32    'h10                                                       
+  HWRITE                       integral  1     'h0                                                        
+  HSIZE                        integral  3     'h0                                                        
+  HBURST                       integral  3     'h3                                                        
+  HPROT                        integral  4     'hc                                                        
+  HWDATA                       integral  32    'ha5f904a5                                                 
+  begin_time                   time      64    31                                                         
+  end_time                     time      64    31                                                         
+  depth                        int       32    'd2                                                        
+  parent sequence (name)       string    10    seq_handle                                                 
+  parent sequence (full name)  string    59    uvm_test_top.env_handle.agent_handle.seqr_handle.seq_handle
+  sequencer                    string    48    uvm_test_top.env_handle.agent_handle.seqr_handle           
+----------------------------------------------------------------------------------------------------------
+UVM_INFO monitor.sv(30) @ 33: uvm_test_top.env_handle.agent_handle.monitor_handle [MONITOR] 33 Received transaction: Addr=10 
+UVM_INFO monitor.sv(51) @ 33: uvm_test_top.env_handle.agent_handle.monitor_handle [MONITOR] 33 Received transaction: Addr=8 Data=7
+UVM_INFO scoreboard.sv(12) @ 33: uvm_test_top.env_handle.scb_handle [SCOREBOARD] Start of Scoreboard
+UVM_INFO scoreboard.sv(23) @ 33: uvm_test_top.env_handle.scb_handle [SUCCESSFUL] Comparison Successful for Addr=8
+UVM_INFO scoreboard.sv(17) @ 33: uvm_test_top.env_handle.scb_handle [SCOREBOARD] arr= '{0:'h5, 8:'h7, 16:'h8, 24:'h2}
+----------------------------------------------------------------------------------------------------------
+Name                           Type      Size  Value                                                      
+----------------------------------------------------------------------------------------------------------
+req                            seqItem   -     @2650                                                      
+  HBUSREQx                     integral  1     'h1                                                        
+  HLOCKx                       integral  1     'h0                                                        
+  HTRANS                       integral  2     'h3                                                        
+  HADDR                        integral  32    'h18                                                       
+  HWRITE                       integral  1     'h0                                                        
+  HSIZE                        integral  3     'h0                                                        
+  HBURST                       integral  3     'h3                                                        
+  HPROT                        integral  4     'hb                                                        
+  HWDATA                       integral  32    'hb0c1747b                                                 
+  begin_time                   time      64    33                                                         
+  end_time                     time      64    33                                                         
+  depth                        int       32    'd2                                                        
+  parent sequence (name)       string    10    seq_handle                                                 
+  parent sequence (full name)  string    59    uvm_test_top.env_handle.agent_handle.seqr_handle.seq_handle
+  sequencer                    string    48    uvm_test_top.env_handle.agent_handle.seqr_handle           
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+Name                           Type      Size  Value                                                      
+----------------------------------------------------------------------------------------------------------
+req                            seqItem   -     @2650                                                      
+  HBUSREQx                     integral  1     'h1                                                        
+  HLOCKx                       integral  1     'h0                                                        
+  HTRANS                       integral  2     'h3                                                        
+  HADDR                        integral  32    'h18                                                       
+  HWRITE                       integral  1     'h0                                                        
+  HSIZE                        integral  3     'h0                                                        
+  HBURST                       integral  3     'h3                                                        
+  HPROT                        integral  4     'hb                                                        
+  HWDATA                       integral  32    'hb0c1747b                                                 
+  begin_time                   time      64    33                                                         
+  end_time                     time      64    33                                                         
+  depth                        int       32    'd2                                                        
+  parent sequence (name)       string    10    seq_handle                                                 
+  parent sequence (full name)  string    59    uvm_test_top.env_handle.agent_handle.seqr_handle.seq_handle
+  sequencer                    string    48    uvm_test_top.env_handle.agent_handle.seqr_handle           
+----------------------------------------------------------------------------------------------------------
+UVM_INFO monitor.sv(30) @ 35: uvm_test_top.env_handle.agent_handle.monitor_handle [MONITOR] 35 Received transaction: Addr=18 
+UVM_INFO monitor.sv(51) @ 35: uvm_test_top.env_handle.agent_handle.monitor_handle [MONITOR] 35 Received transaction: Addr=10 Data=8
+UVM_INFO scoreboard.sv(12) @ 35: uvm_test_top.env_handle.scb_handle [SCOREBOARD] Start of Scoreboard
+UVM_INFO scoreboard.sv(23) @ 35: uvm_test_top.env_handle.scb_handle [SUCCESSFUL] Comparison Successful for Addr=16
+UVM_INFO scoreboard.sv(17) @ 35: uvm_test_top.env_handle.scb_handle [SCOREBOARD] arr= '{0:'h5, 8:'h7, 16:'h8, 24:'h2}
+UVM_INFO sequence.sv(55) @ 35: uvm_test_top.env_handle.agent_handle.seqr_handle@@seq_handle [SEQUENCE] End of Sequence
+UVM_INFO /opt/cadence/XCELIUM2009/tools/methodology/UVM/CDNS-1.1d/sv/src/base/uvm_objection.svh(1268) @ 37: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO monitor.sv(30) @ 37: uvm_test_top.env_handle.agent_handle.monitor_handle [MONITOR] 37 Received transaction: Addr=18 
+UVM_INFO monitor.sv(51) @ 37: uvm_test_top.env_handle.agent_handle.monitor_handle [MONITOR] 37 Received transaction: Addr=18 Data=2
+UVM_INFO scoreboard.sv(12) @ 37: uvm_test_top.env_handle.scb_handle [SCOREBOARD] Start of Scoreboard
+UVM_INFO scoreboard.sv(23) @ 37: uvm_test_top.env_handle.scb_handle [SUCCESSFUL] Comparison Successful for Addr=24
+UVM_INFO scoreboard.sv(17) @ 37: uvm_test_top.env_handle.scb_handle [SCOREBOARD] arr= '{0:'h5, 8:'h7, 16:'h8, 24:'h2}
+
+--- UVM Report catcher Summary ---
+
+
+Number of demoted UVM_FATAL reports  :    0
+Number of demoted UVM_ERROR reports  :    0
+Number of demoted UVM_WARNING reports:    0
+Number of caught UVM_FATAL reports   :    0
+Number of caught UVM_ERROR reports   :    0
+Number of caught UVM_WARNING reports :    0
+
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :   58
+UVM_WARNING :    0
+UVM_ERROR :    2
+UVM_FATAL :    0
+** Report counts by id
+[Error Data]     2
+[MONITOR]    26
+[RNTST]     1
+[SCOREBOARD]    24
+[SEQUENCE]     2
+[SUCCESSFUL]     4
+[TEST_DONE]     1
+Simulation complete via $finish(1) at time 37 NS + 46
+/opt/cadence/XCELIUM2009/tools/methodology/UVM/CDNS-1.1d/sv/src/base/uvm_root.svh:457     $finish;
+xcelium> 

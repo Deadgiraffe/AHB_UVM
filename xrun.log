@@ -1,5 +1,5 @@
 xrun(64): 20.09-s001: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
-TOOL:	xrun(64)	20.09-s001: Started on Dec 08, 2025 at 10:10:06 IST
+TOOL:	xrun(64)	20.09-s001: Started on Dec 31, 2025 at 18:05:24 IST
 xrun
 	-access +rwc
 	-sv
@@ -463,4 +463,6 @@ UVM_FATAL :    0
 [TEST_DONE]     1
 Simulation complete via $finish(1) at time 37 NS + 46
 /opt/cadence/XCELIUM2009/tools/methodology/UVM/CDNS-1.1d/sv/src/base/uvm_root.svh:457     $finish;
-xcelium> 
+xcelium> ^C
+xcelium> exit
+TOOL:	xrun(64)	20.09-s001: Exiting on Dec 31, 2025 at 18:16:09 IST  (total: 00:10:45)
